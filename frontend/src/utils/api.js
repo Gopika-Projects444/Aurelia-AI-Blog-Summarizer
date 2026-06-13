@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: "https://aurelia-ai-blog-summarizer.onrender.com/api",
+  baseURL: "https://aurelia-ai-blog-summarizer.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
