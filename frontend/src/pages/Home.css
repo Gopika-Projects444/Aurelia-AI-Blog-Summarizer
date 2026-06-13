@@ -1,0 +1,191 @@
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  background: linear-gradient(160deg, #6B0000 0%, #8B0000 40%, #A31515 70%, #8B0000 100%);
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.hero-deco {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(201,168,76,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-ornament {
+  font-size: 3rem;
+  color: var(--gold);
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.hero-accent {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Search */
+.search-section { margin-bottom: 2rem; }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 0.4rem 0.4rem 0.4rem 1.25rem;
+  box-shadow: var(--shadow-md);
+  border: 1.5px solid var(--gray-200);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  transition: border-color var(--transition);
+}
+.search-bar:focus-within { border-color: var(--crimson); }
+
+.search-icon { font-size: 1rem; flex-shrink: 0; }
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--gray-800);
+  background: transparent;
+}
+.search-input::placeholder { color: var(--gray-400); }
+
+.search-clear {
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  transition: background var(--transition);
+}
+.search-clear:hover { background: var(--gray-100); color: var(--gray-800); }
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.category-btn:hover { border-color: var(--crimson); color: var(--crimson); }
+.category-btn.active {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: white;
+}
+
+/* Results Header */
+.results-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+.results-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+.results-count { font-size: 0.875rem; color: var(--gray-400); margin-top: 0.2rem; }
+
+/* Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+.empty-state h3 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.5rem; }
+.empty-state p { color: var(--gray-400); }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem 0;
+}
+.page-numbers { display: flex; gap: 0.3rem; }
+.page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  color: var(--gray-600);
+}
+.page-btn:hover { border-color: var(--crimson); color: var(--crimson); }
+.page-btn.active { background: var(--crimson); border-color: var(--crimson); color: white; }
+
+@media (max-width: 768px) {
+  .blog-grid { grid-template-columns: 1fr; }
+}

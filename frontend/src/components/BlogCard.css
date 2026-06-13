@@ -1,0 +1,99 @@
+.blog-card-link { text-decoration: none; display: block; }
+
+.blog-card {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+.blog-card:hover {
+  border-left-color: var(--gold);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.blog-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ai-badge {
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold-muted);
+  font-size: 0.7rem;
+}
+
+.blog-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-preview {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.blog-card-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.tag {
+  font-size: 0.75rem;
+  color: var(--crimson);
+  background: rgba(139, 0, 0, 0.06);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.blog-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--gray-100);
+  margin-top: auto;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.author-chip {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--crimson), var(--crimson-soft));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.author-name { font-size: 0.8rem; font-weight: 600; color: var(--gray-800); }
+.blog-date   { font-size: 0.72rem; color: var(--gray-400); }
+.read-time   { font-size: 0.78rem; color: var(--gray-400); }
